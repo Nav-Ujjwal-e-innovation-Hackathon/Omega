@@ -21,3 +21,7 @@ B: Matlab
 
 C: OpenCV - {detection.py & video_det.py}
 1) The human detection part using computer vision was tested and slected as better method for human perception for robot rather PIR sensor.
+
+RESULTS:
+After running codes and simulation, few videos taken for presentation are uploaded on youtube.
+Youtube Playlist: https://www.youtube.com/playlist?list=PLhgI9FA__F1YdLFQ6t61QBYyg65VekeYF
