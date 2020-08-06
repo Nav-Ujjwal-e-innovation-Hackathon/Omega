@@ -1,6 +1,6 @@
 obstacle_range: 1.5
 
-footprint: [[0.15,0.15], [0.15,-0.15],[-0.15,-0.15],[-0.15,0.15]]
+footprint: [[0.20,0.20], [0.2,-0.2],[-0.2,-0.2],[-0.2,0.2]]
 #robot_radius: ir_of_robot
 inflation_radius: 0.2
 
