@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
  
- <arg name="fablab" value="$(find uvd_gazebo)/worlds/fablab_arena.world"/>
+ <arg name="fablab" value="$(find uvd_gazebo)/worlds/uvd_arena_trial.world"/>
  <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="true"/>
     <arg name="debug" value="false"/>
@@ -16,7 +16,7 @@
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="0"/>
- <param name="robot_description" command="xacro --inorder '$(find uvd_description)/urdf/uvd.urdf'" />
+ <param name="robot_description" command="xacro --inorder '$(find uvd_description)/urdf/uvd_new.urdf'" />
  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
         args="-urdf -param robot_description -model robot 
               -x $(arg x) -y $(arg y) -z $(arg z)
