@@ -25,6 +25,36 @@
       <origin rpy="0 0 0" xyz="0 0 0"/>
     </inertial>
   </link>
+
+  <link name="uv_base">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <visual>
+      <geometry>
+         <cylinder length="1.5" radius="0.125"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white"/>
+    </visual>
+    <collision>
+      <geometry>
+         <cylinder length="1.5" radius="0.095"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+    </inertial>
+  </link>
+
+  <joint name="uv_base_body" type="fixed">
+    <parent link="base_link"/>
+    <child link="uv_base"/>
+    <origin rpy="0 0 0" xyz="0 0 0.85"/>
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="1.0"/>
+    <limit effort="10000" velocity="1000"/>
+  </joint>
  
  <link name="front_left_wheel">
     <visual>
@@ -202,7 +232,7 @@
     <parent link="base_link"/>
     <child link="camera_link"/>
     <axis xyz="0 0 0" />
-    <origin xyz="0.04 0 1.457" rpy="0 0 0"/>
+    <origin xyz="0.13 0 1.457" rpy="0 0 0"/>
   </joint>
   
   <!-- Camera Plugin-->
